@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tìm kiếm Google và Bing</title>
+</head>
+<body>
+
+    <h2>Tìm kiếm trên Google</h2>
+    <form action="https://www.google.com.vn/search" method="GET"> 
+        <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm Google..."/>
+        <input type="submit" value="Tìm kiếm trên Google"/>
+    </form>
+
+    <h2>Tìm kiếm trên Bing</h2>
+    <form action="https://www.bing.com/search" method="GET"> 
+        <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm Bing..."/>
+        <input type="submit" value="Tìm kiếm trên Bing"/>
+    </form>
+
+</body>
+</html>
