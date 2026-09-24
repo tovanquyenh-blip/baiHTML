@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <!-- Bảng lịch họp sử dụng rowspan và colspan -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ngày Thứ Hai: Có 2 cuộc họp (Sử dụng rowspan="2" ở cột Ngày) -->
+            <tr>
+                <td rowspan="2">Thứ Hai (28/09)</td>
+                <td>08:00 - 09:30</td>
+                <td>Họp giao ban đầu tuần toàn công ty</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:30</td>
+                <td>Họp phòng Lập trình về tiến độ dự án</td>
+            </tr>
+
+            <!-- Ngày Thứ Ba: Cuộc họp kéo dài cả sáng (Sử dụng colspan="2" cho khung giờ & nội dung) -->
+            <tr>
+                <td>Thứ Ba (29/09)</td>
+                <td colspan="2">08:00 - 12:00: Hội thảo đào tạo công nghệ mới cho nhân viên</td>
+            </tr>
+
+            <!-- Ngày Thứ Tư: Có 2 cuộc họp (Sử dụng rowspan="2" ở cột Ngày) -->
+            <tr>
+                <td rowspan="2">Thứ Tư (30/09)</td>
+                <td>14:00 - 15:30</td>
+                <td>Họp với đối tác về hợp đồng mới</td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <td>Họp tổng kết tháng của bộ phận Kinh doanh</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
