@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #f0f4f7;
+            padding: 30px 15px;
+            color: #333;
+        }
+        .survey-container {
+            background-color: #ffffff;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 25px 30px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #222;
+        }
+        p.description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label.section-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        select, input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        /* Style cho bảng đánh giá Matrix */
+        table.matrix {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        table.matrix th, table.matrix td {
+            border: 1px solid #e0e0e0;
+            padding: 10px 5px;
+            text-align: center;
+        }
+        table.matrix th {
+            background-color: #f8f9fa;
+            font-weight: normal;
+        }
+        table.matrix tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+        table.matrix td.row-title {
+            text-align: left;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-container">
+        <h2>Market Research Survey</h2>
+        <p class="description">Please take a few minutes to give us feedback about our products and services.</p>
+
+        <form action="#" method="POST">
+            
+            <!-- Độ tuổi -->
+            <div class="form-group">
+                <label class="section-label">What is your age group?</label>
+                <select name="age_group">
+                    <option value="18-24">18 - 24</option>
+                    <option value="25-34" selected>25 - 34</option>
+                    <option value="35-50">35 - 50</option>
+                    <option value="50+">50+</option>
+                </select>
+            </div>
+
+            <!-- Thu nhập -->
+            <div class="form-group">
+                <label class="section-label">What is your yearly household income?</label>
+                <select name="income">
+                    <option value="0-25">$0 - $25,000</option>
+                    <option value="25-50">$25,001 - $50,000</option>
+                    <option value="50-100">$50,001 - $100,000</option>
+                    <option value="100+">$100,000+</option>
+                </select>
+            </div>
+
+            <!-- Giới tính -->
+            <div class="form-group">
+                <label class="section-label">Gender</label>
+                <label><input type="radio" name="gender" value="male"> Male</label><br>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <!-- Bảng đánh giá Matrix -->
+            <div class="form-group">
+                <label class="section-label">How satisfied are you with our product/service?</label>
+                
+                <table class="matrix">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Very Satisfied</th>
+                            <th>Satisfied</th>
+                            <th>Neutral</th>
+                            <th>Unsatisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-title">Product Quality</td>
+                            <td><input type="radio" name="quality" value="very_satisfied"></td>
+                            <td><input type="radio" name="quality" value="satisfied"></td>
+                            <td><input type="radio" name="quality" value="neutral"></td>
+                            <td><input type="radio" name="quality" value="unsatisfied"></td>
+                        </tr>
+                        <tr>
+                            <td class="row-title">Customer Service</td>
+                            <td><input type="radio" name="service" value="very_satisfied"></td>
+                            <td><input type="radio" name="service" value="satisfied"></td>
+                            <td><input type="radio" name="service" value="neutral"></td>
+                            <td><input type="radio" name="service" value="unsatisfied"></td>
+                        </tr>
+                        <tr>
+                            <td class="row-title">Overall Value</td>
+                            <td><input type="radio" name="value" value="very_satisfied"></td>
+                            <td><input type="radio" name="value" value="satisfied"></td>
+                            <td><input type="radio" name="value" value="neutral"></td>
+                            <td><input type="radio" name="value" value="unsatisfied"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tần suất sử dụng -->
+            <div class="form-group">
+                <label class="section-label">How often do you use our product?</label>
+                <label><input type="radio" name="frequency" value="daily"> Daily</label><br>
+                <label><input type="radio" name="frequency" value="weekly"> Weekly</label><br>
+                <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Survey" class="btn-submit">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
