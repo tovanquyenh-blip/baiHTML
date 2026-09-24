@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang giới thiệu</title>
+</head>
+<body>
+    <h1>Đây là trang Giới thiệu (About Page)</h1>
+    <p>Cảm ơn bạn đã ghé thăm trang web của tôi!</p>
+    <p><a href="index.html">Quay lại Trang chủ</a></p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên kết yêu thích</title>
+</head>
+<body>
+
+    <h1>Liên kết yêu thích của tôi</h1>
+
+    <!-- Danh sách liên kết đến các trang web khác nhau -->
+    <ul>
+        <!-- 1. Liên kết mở trong tab mới với target="_blank" -->
+        <li>
+            <a href="https://www.google.com" target="_blank">Trang tìm kiếm Google (Mở tab mới)</a>
+        </li>
+        <!-- 2. Liên kết thông thường -->
+        <li>
+            <a href="https://github.com">Trang chủ GitHub</a>
+        </li>
+        <!-- 3. Liên kết thông thường -->
+        <li>
+            <a href="https://codegym.vn">Trang chủ CodeGym</a>
+        </li>
+        <!-- 4. Liên kết đến file HTML khác trong cùng thư mục (about.html) -->
+        <li>
+            <a href="about.html">Xem trang Giới thiệu bản thân (about.html)</a>
+        </li>
+        <!-- 5. Liên kết đến email với mailto: -->
+        <li>
+            <a href="mailto:your.email@example.com">Gửi email cho tôi</a>
+        </li>
+    </ul>
+
+</body>
+</html>
