@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Danh sách trong CSS</title>
+    <!-- Liên kết với file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Bài Thực Hành: Định Kiểu Danh Sách trong CSS</h1>
+
+    <!-- Mục 2: Danh sách môn học với list-style-type: square -->
+    <section>
+        <h2>2. Danh sách môn học (Square)</h2>
+        <ul class="list-square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <!-- Mục 3: Danh sách có thứ tự với số La Mã -->
+    <section>
+        <h2>3. Các bước học tập (Upper Roman)</h2>
+        <ol class="list-roman">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+        </ol>
+    </section>
+
+    <!-- Mục 4: Đánh dấu bằng hình ảnh (list-style-image) -->
+    <section>
+        <h2>4. Công cụ học tập (Hình ảnh đánh dấu)</h2>
+        <ul class="list-image">
+            <li>Visual Studio Code</li>
+            <li>Google Chrome</li>
+            <li>GitHub</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <!-- Mục 5: Thay đổi vị trí (Outside vs Inside) -->
+    <section>
+        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
+        <p><strong>Outside (Mặc định):</strong></p>
+        <ul class="position-outside">
+            <li>Mục 1: Dấu đánh dấu nằm ngoài hộp nội dung của thẻ li.</li>
+            <li>Mục 2: Khi văn bản xuống dòng sẽ thẳng hàng với chữ bên trên.</li>
+        </ul>
+
+        <p><strong>Inside:</strong></p>
+        <ul class="position-inside">
+            <li>Mục 1: Dấu đánh dấu nằm bên trong hộp nội dung của thẻ li.</li>
+            <li>Mục 2: Khi văn bản xuống dòng sẽ nằm ngay dưới dấu đánh dấu.</li>
+        </ul>
+    </section>
+
+    <!-- Mục 6: Thuộc tính rút gọn list-style -->
+    <section>
+        <h2>6. Thuộc tính rút gọn list-style</h2>
+        <ul class="list-shorthand">
+            <li>Thành phần 1</li>
+            <li>Thành phần 2</li>
+            <li>Thành phần 3</li>
+        </ul>
+    </section>
+
+    <!-- Mục 7: Ngôn ngữ lập trình với màu sắc và khoảng cách -->
+    <section>
+        <h2>7. Ngôn ngữ lập trình (Màu sắc & Khoảng cách)</h2>
+        <ul class="styled-languages">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <!-- Mục 8: Lộ trình học lập trình Web (Bài tập tổng hợp) -->
+    <section>
+        <h2>8. Lộ trình học lập trình Web (Bài tập tổng hợp)</h2>
+        <ul class="web-roadmap">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+            <li>GitHub</li>
+        </ul>
+    </section>
+
+</body>
+</html>
+
+/* Định dạng chung cho trang web */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #3498db;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+/* ==========================================
+   2. Danh sách kiểu ô vuông (square)
+   ========================================== */
+.list-square {
+    list-style-type: square;
+}
+
+/* ==========================================
+   3. Danh sách số La Mã viết hoa (upper-roman)
+   ========================================== */
+.list-roman {
+    list-style-type: upper-roman;
+}
+
+/* ==========================================
+   4. Sử dụng hình ảnh làm dấu đánh dấu
+   ========================================== */
+.list-image {
+    /* Đảm bảo đường dẫn hình ảnh chính xác (có thể thay icon bằng đường dẫn SVG/PNG khác) */
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="%232ecc71"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+}
+
+/* ==========================================
+   5. Vị trí dấu đánh dấu
+   ========================================== */
+.position-outside {
+    list-style-position: outside;
+    background-color: #eef9ff;
+    padding: 10px 40px;
+}
+
+.position-inside {
+    list-style-position: inside;
+    background-color: #fff9ee;
+    padding: 10px 20px;
+}
+
+/* ==========================================
+   6. Thuộc tính rút gọn list-style
+   ========================================== */
+.list-shorthand {
+    /* Cú pháp: list-style: [type] [position] [image] */
+    list-style: circle inside;
+}
+
+/* ==========================================
+   7. Định kiểu màu sắc và khoảng cách
+   ========================================== */
+.styled-languages {
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    border-radius: 6px;
+    list-style-type: disc;
+}
+
+.styled-languages li {
+    color: #ecf0f1;
+    margin: 8px 0;
+    padding: 4px 8px;
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+/* ==========================================
+   8. Bài tập tổng hợp (Lộ trình Web)
+   ========================================== */
+.web-roadmap {
+    /* Sử dụng thuộc tính rút gọn list-style */
+    list-style: square inside;
+    background-color: #e8f8f5;
+    padding: 20px;
+    border-left: 5px solid #1abc9c;
+    border-radius: 4px;
+}
+
+.web-roadmap li {
+    color: #16a085;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: 1px solid #a3e4d7;
+    border-radius: 4px;
+}
