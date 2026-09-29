@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+
+        /* -------------------------------------------------------------
+           BẢNG 1: Bảng mặc định (Đường viền kép)
+           ------------------------------------------------------------- */
+        .table-basic {
+            border: 1px solid black;
+        }
+        .table-basic th, 
+        .table-basic td {
+            border: 1px solid black;
+        }
+
+        /* -------------------------------------------------------------
+           BẢNG 2: Bảng hoàn chỉnh áp dụng CSS đẹp mắt
+           ------------------------------------------------------------- */
+        .styled-table {
+            width: 100%;                           /* Chiều rộng 100% */
+            border-collapse: collapse;             /* Gộp đường viền liền kề */
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #ffffff;
+        }
+
+        /* Đường viền và Khoảng cách padding */
+        .styled-table th, 
+        .styled-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;                   /* Padding thoáng đẹp */
+        }
+
+        /* Căn chỉnh Tiêu đề (TH) */
+        .styled-table th {
+            height: 45px;                         /* Chiều cao tiêu đề */
+            text-align: left;                     /* Căn trái chữ */
+            background-color: #2c3e50;            /* Nền tối */
+            color: #ffffff;                       /* Chữ trắng */
+            font-weight: bold;
+        }
+
+        /* Định kiểu Ô dữ liệu (TD) */
+        .styled-table td {
+            height: 50px;
+            vertical-align: middle;               /* Căn giữa theo chiều dọc */
+            background-color: #ffffff;
+            color: #444444;
+        }
+
+        /* Hiệu ứng dòng xen kẽ (Zebra Striping - Mở rộng nâng cao) */
+        .styled-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Hiệu ứng di chuột vào dòng */
+        .styled-table tbody tr:hover {
+            background-color: #eef2f7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thực Hành Định Kiểu Bảng (Table) Trong CSS</h1>
+
+    <h2>1. Bảng mặc định chưa dùng border-collapse (Viền kép)</h2>
+    <table class="table-basic">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <h2>2. Bảng nâng cao (Hoàn chỉnh CSS: Border-collapse, Padding, Alignment, Color)</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+                <td>Đang học</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+                <td>Đang học</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>22</td>
+                <td>Mobile</td>
+                <td>Tốt nghiệp</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
