@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web của tôi</title>
+    <!-- Liên kết tới file CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tiêu đề h1 sử dụng bộ chọn thẻ (element selector) -->
+    <h1>Trang web của tôi</h1>
+
+    <!-- Đoạn văn mô tả bản thân sử dụng ID selector -->
+    <p id="about-me">
+        Xin chào! Tôi là một học viên lập trình web. Tôi rất thích học hỏi các công nghệ mới và xây dựng các giao diện trang web đẹp mắt.
+    </p>
+
+    <!-- Danh sách sở thích sử dụng Class selector -->
+    <h2>Sở thích của tôi</h2>
+    <ul class="hobby-list">
+        <li class="hobby-item">Đọc sách công nghệ</li>
+        <li class="hobby-item">Lập trình ứng dụng</li>
+        <li class="hobby-item">Nghe nhạc và thư giãn</li>
+    </ul>
+
+    <!-- Nút bấm sử dụng Pseudo-class (:hover) -->
+    <div class="button-container">
+        <button class="btn-custom">Nhấn vào đây</button>
+    </div>
+
+</body>
+</html>
+
+/* =========================================================
+   1. Bộ chọn thẻ (Element Selector)
+   Đổi màu nền của toàn bộ trang web
+   ========================================================= */
+body {
+    background-color: #f0f4f8; /* Màu nền xám xanh nhạt */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333333;
+}
+
+/* =========================================================
+   2. Bộ chọn Gom nhóm (Grouping Selector) & Element Selector
+   Căn giữa tiêu đề h1 và h2
+   ========================================================= */
+h1, h2 {
+    text-align: center;
+    color: #1a365d; /* Màu xanh đậm */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+/* =========================================================
+   3. Bộ chọn ID (ID Selector)
+   Định dạng đoạn văn mô tả bản thân
+   ========================================================= */
+#about-me {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #4a5568;
+}
+
+/* =========================================================
+   4. Bộ chọn Lớp (Class Selector) & Pseudo-classes cho danh sách
+   Định dạng danh sách với màu sắc khác nhau cho từng item
+   ========================================================= */
+.hobby-list {
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    padding-left: 0;
+    list-style-type: none; /* Bỏ chấm tròn mặc định */
+}
+
+.hobby-item {
+    background-color: #ffffff;
+    margin: 8px 0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Sử dụng Pseudo-class :nth-child để đổi màu sắc khác nhau cho các phần tử */
+.hobby-item:nth-child(1) {
+    border-left: 5px solid #e53e3e; /* Đỏ */
+    color: #9b2c2c;
+}
+
+.hobby-item:nth-child(2) {
+    border-left: 5px solid #319795; /* Xanh ngọc */
+    color: #234e52;
+}
+
+.hobby-item:nth-child(3) {
+    border-left: 5px solid #dd6b20; /* Cam */
+    color: #7b341e;
+}
+
+/* =========================================================
+   5. Bộ chọn Pseudo-class (:hover) cho nút bấm
+   ========================================================= */
+.button-container {
+    text-align: center;
+}
+
+.btn-custom {
+    background-color: #3182ce; /* Màu xanh dương */
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+    box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3);
+}
+
+/* Hiệu ứng khi rê chuột vào nút (Hover Effect) */
+.btn-custom:hover {
+    background-color: #2b6cb0; /* Đổi sang màu xanh đậm hơn */
+    transform: translateY(-2px); /* Nổi nhẹ lên trên */
+    box-shadow: 0 6px 12px rgba(49, 130, 206, 0.4);
+}
+
+/* Hiệu ứng khi nhấn nút (Active Effect) */
+.btn-custom:active {
+    transform: translateY(0);
+}
