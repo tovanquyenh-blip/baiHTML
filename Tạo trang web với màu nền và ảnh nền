@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web với màu nền và ảnh nền</title>
+    <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tiêu đề trang web -->
+    <h1>Chào mừng đến với trang web của tôi</h1>
+
+    <!-- Đoạn văn mô tả -->
+    <p class="description">
+        Đây là trang web mẫu thực hành các thuộc tính liên quan đến Background trong CSS.
+    </p>
+
+    <!-- Khối div chứa nội dung quan trọng có ảnh nền -->
+    <div class="banner-box">
+        <h2>Nội Dung Quan Trọng</h2>
+        <p>Khối này được trang trí bằng ảnh nền, căn giữa nội dung và có phủ lớp màu để chữ dễ đọc hơn.</p>
+        <button class="btn-action">Khám phá ngay</button>
+    </div>
+
+</body>
+</html>
+
+/* ==========================================
+   1. Thiết lập màu nền cho toàn bộ trang web
+   ========================================== */
+body {
+    /* Đổi màu nền của trang web sang màu xanh xám nhạt */
+    background-color: #eef2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Định dạng tiêu đề và đoạn văn bên ngoài */
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin-top: 20px;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   2. Thiết lập ảnh nền và căn giữa cho khối <div>
+   ========================================== */
+.banner-box {
+    /* Thêm ảnh nền từ Unsplash (hoặc thay bằng đường dẫn ảnh của bạn: url('images/bg.jpg')) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://images.unsplash.com/photo-1518655048521-f130df041f66?auto=format&fit=crop&w=1000&q=80');
+
+    /* Các thuộc tính xử lý ảnh nền */
+    background-size: cover;       /* Co giãn ảnh vừa vặn toàn bộ khối */
+    background-position: center;  /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại ảnh */
+
+    /* Kích thước và kiểu dáng khối */
+    max-width: 700px;
+    margin: 0 auto;               /* Căn giữa khối div ra giữa màn hình */
+    padding: 60px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    /* Căn giữa nội dung văn bản bên trong khối div */
+    text-align: center;
+    color: #ffffff;               /* Chữ màu trắng để nổi bật trên ảnh nền */
+}
+
+.banner-box h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.banner-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Nút bấm bên trong khối div */
+.btn-action {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #2563eb;
+}
+
