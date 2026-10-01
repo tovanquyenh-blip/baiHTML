@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline Style</title>
+</head>
+<body>
+
+    <!-- Thay đổi màu sắc thẻ h1 và p bằng thuộc tính style -->
+    <h1 style="color: #d9534f;">Thẻ tiêu đề sử dụng Inline Style (Màu đỏ)</h1>
+    <p style="color: #0275d8;">Đoạn văn bản sử dụng Inline Style (Màu xanh dương).</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Style</title>
+    
+    <!-- Khai báo CSS nội bộ -->
+    <style>
+        h1 {
+            color: #2e7d32; /* Màu xanh lá */
+        }
+        p {
+            color: #ed6c02; /* Màu cam */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thẻ tiêu đề sử dụng Internal Style</h1>
+    <p>Đoạn văn bản sử dụng Internal Style.</p>
+
+</body>
+</html>
+/* File: style.css */
+h1 {
+    color: #6a1b9a; /* Màu tím */
+}
+
+p {
+    color: #00838f; /* Màu xanh ngọc */
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>External Style</title>
+    
+    <!-- Nhúng file CSS bên ngoài vào HTML -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Thẻ tiêu đề sử dụng External Style</h1>
+    <p>Đoạn văn bản sử dụng External Style.</p>
+
+</body>
+</html>
